@@ -8,7 +8,7 @@ let montoTotal = document.getElementById('total');
 function actualiza(tip, bill){
     
     montoTip.innerHTML = ((bill*tip/100)/parseInt(numeroPersonas.value)).toFixed(2);
-    montoTotal.innerHTML = ((bill+(bill*tip/100))/parseInt(numeroPersonas.value)).toFixed(2);
+    montoTotal.innerHTML = (((bill*tip/100)+bill)/parseInt(numeroPersonas.value)).toFixed(2);
 }
 
 Array.from(buttonTips).forEach(element => {
@@ -37,6 +37,9 @@ inputBill.addEventListener('input',()=>{
     if(billValue==""){
         montoTip.innerHTML=0;
         montoTotal.innerHTML=0;
+    }else if(billValue<0){
+        alert('invalid number')
+        inputBill.value=0;
     }else{
         billValue= parseFloat(inputBill.value);
         actualiza(tipValue,billValue);
@@ -49,7 +52,7 @@ numeroPersonas.addEventListener('input',()=>{
         montoTip.innerHTML=0;
         montoTotal.innerHTML=0;
     }else if(numeroPersonas.value==0){
-        alert("digite numero de personas valido");
+        alert("invalid number");
         numeroPersonas.value=1;
         actualiza(tipValue,billValue);
     }else{
