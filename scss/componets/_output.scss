@@ -1,0 +1,58 @@
+.container__output{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    &__container{
+        width: 85%;
+        height: 85%;
+        background-color: $very_dark_cyan;
+        border-radius: 20px;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        &__resultados{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 70%;
+            padding: 10px;
+            color: $white;
+            &__count__tip{
+                text-align: right;
+                color: $Strong_cyan;
+                font-size: 27px;
+            }
+            &__count__total{
+                text-align: right;
+                color: $Strong_cyan;
+                font-size: 27px;
+            }
+        }
+        &__boton{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            a{
+                height: 100%;
+                width: 85%;
+            }
+            button{
+                width: 100%;
+                border-radius: 50px;
+                font-size: 25px;
+                background-color: $Strong_cyan;
+                color: $very_dark_cyan;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $light_grayish_cyan;
+                }
+            }
+
+        }
+    
+    }
+}

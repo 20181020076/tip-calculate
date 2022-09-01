@@ -1,0 +1,28 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $very_dark_cyan;
+    background-color: $light_grayish_cyan;
+    min-height: 100vh;
+    padding-bottom: 20px;
+    justify-content: center;
+    h2{
+        color: $very_dark_cyan;
+    }
+    .brand{
+        display: block;
+        width: 115px;
+        overflow-wrap: break-word;
+        text-align: justify;
+        height: 120px;
+        margin-top: 10px;
+
+        
+        h1{
+            font-size: 40px;
+        }
+    }
+    
+}    
+    
